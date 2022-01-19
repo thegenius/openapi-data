@@ -147,10 +147,19 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.talkingdata.engineer.util.CombineAppList</mainClass> <!-- 含main方法的类 -->
+                            <mainClass>com.lvonce.openapi.data.App</mainClass> <!-- 含main方法的类 -->
                         </manifest>
                     </archive>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
 
