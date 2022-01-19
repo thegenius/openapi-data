@@ -1,14 +1,14 @@
-package com.lvonce;
+package com.lvonce.openapi.data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.BooleanNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
-import com.lvonce.impl.DataRepositoryImpl;
-import com.lvonce.impl.QueryLanguageMapperImpl;
-import com.lvonce.impl.RequestHandlerImpl;
-import com.lvonce.utils.ResultSetSerializer;
+import com.lvonce.openapi.data.impl.DataRepositoryImpl;
+import com.lvonce.openapi.data.impl.QueryLanguageMapperImpl;
+import com.lvonce.openapi.data.impl.RequestHandlerImpl;
+import com.lvonce.openapi.data.utils.ResultSetSerializer;
 import io.undertow.Undertow;
 import io.undertow.util.Headers;
 

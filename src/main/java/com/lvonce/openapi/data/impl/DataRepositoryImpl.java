@@ -1,8 +1,8 @@
-package com.lvonce.impl;
+package com.lvonce.openapi.data.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.lvonce.DataRepository;
+import com.lvonce.openapi.data.DataRepository;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +27,10 @@ public class DataRepositoryImpl implements DataRepository {
         config.setJdbcUrl("jdbc:h2:mem:dbc2m;DATABASE_TO_UPPER=false;MODE=MYSQL");
         config.setUsername("sa");
         config.setPassword("");
+        config.setDriverClassName("org.h2.Driver");
         config.addDataSourceProperty("cachePrepStmts", true);
+        config.addDataSourceProperty("prepStmtCacheSize", "256");
+        config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
         return new HikariDataSource(config);
     }
 

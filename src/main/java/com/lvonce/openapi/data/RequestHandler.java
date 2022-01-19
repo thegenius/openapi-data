@@ -1,4 +1,4 @@
-package com.lvonce;
+package com.lvonce.openapi.data;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.undertow.server.HttpServerExchange;

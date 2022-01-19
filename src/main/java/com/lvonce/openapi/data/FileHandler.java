@@ -1,6 +1,6 @@
-package com.lvonce;
+package com.lvonce.openapi.data;
 
-import com.lvonce.utils.ResourceLoader;
+import com.lvonce.openapi.data.utils.ResourceLoader;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Headers;
 import io.undertow.util.HttpString;

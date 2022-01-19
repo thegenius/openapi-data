@@ -1,11 +1,11 @@
-package com.lvonce.impl;
+package com.lvonce.openapi.data.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.lvonce.QueryLanguageMapper;
-import com.lvonce.RequestHandler;
-import com.lvonce.RequestMatcher;
-import com.lvonce.utils.JsonAwareObjectWrapper;
+import com.lvonce.openapi.data.QueryLanguageMapper;
+import com.lvonce.openapi.data.RequestHandler;
+import com.lvonce.openapi.data.RequestMatcher;
+import com.lvonce.openapi.data.utils.JsonAwareObjectWrapper;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.*;
 import lombok.Data;

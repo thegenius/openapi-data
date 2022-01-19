@@ -1,4 +1,4 @@
-package com.lvonce.utils;
+package com.lvonce.openapi.data.utils;
 
 
 import com.fasterxml.jackson.databind.JsonNode;

@@ -1,4 +1,4 @@
-package com.lvonce.utils;
+package com.lvonce.openapi.data.utils;
 
 /*
  * Copyright 2002-2021 the original author or authors.

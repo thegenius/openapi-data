@@ -1,4 +1,4 @@
-package com.lvonce.impl;
+package com.lvonce.openapi.data.impl;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -9,8 +9,8 @@ import com.github.fge.jsonschema.core.report.ProcessingMessage;
 import com.github.fge.jsonschema.core.report.ProcessingReport;
 import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
-import com.lvonce.RequestMatcher;
-import com.lvonce.RequestValidator;
+import com.lvonce.openapi.data.RequestMatcher;
+import com.lvonce.openapi.data.RequestValidator;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.server.handlers.Cookie;
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-public class RequestValidatorImpl implements RequestValidator{
+public class RequestValidatorImpl implements RequestValidator {
     private static ObjectMapper jsonMapper = new ObjectMapper();
     private static JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
 

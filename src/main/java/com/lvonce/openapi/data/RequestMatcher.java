@@ -1,4 +1,4 @@
-package com.lvonce;
+package com.lvonce.openapi.data;
 
 
 import io.swagger.v3.oas.models.OpenAPI;

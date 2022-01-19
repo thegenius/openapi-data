@@ -1,4 +1,4 @@
-package com.lvonce;
+package com.lvonce.openapi.data;
 
 import static org.junit.Assert.assertTrue;
 
