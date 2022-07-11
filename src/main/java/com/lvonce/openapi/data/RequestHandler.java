@@ -19,4 +19,6 @@ public interface RequestHandler {
     }
 
     RequestHandleResult handle(HttpServerExchange exchange) throws RequestValidator.ValidateException;
+
+    void setYamlDefinition(String yamlDefinition);
 }

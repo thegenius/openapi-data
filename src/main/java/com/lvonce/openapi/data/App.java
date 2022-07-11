@@ -18,6 +18,7 @@ public class App {
     private static final QueryLanguageMapper languageMapper = new QueryLanguageMapperImpl();
     private static final DataRepository dataRepository = new DataRepositoryImpl();
     private static final FileHandler fileHandler = new FileHandler();
+    private static final DefinitionHandler definitionHandler = new DefinitionHandler(requestHandler);
     static  {
         SimpleModule module = new SimpleModule();
         module.addSerializer(new ResultSetSerializer());
@@ -31,6 +32,11 @@ public class App {
                     try {
                         boolean isFileContent = fileHandler.handle(exchange);
                         if (isFileContent) {
+                            return;
+                        }
+
+                        boolean isDefinitionPost = definitionHandler.handle(exchange);
+                        if (isDefinitionPost) {
                             return;
                         }
 

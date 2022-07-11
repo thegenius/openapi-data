@@ -27,6 +27,17 @@ public class RequestHandlerImpl implements RequestHandler {
         }
     }
 
+    public void setYamlDefinition(String yamlDefinition) {
+        try {
+            SwaggerParseResult result = new OpenAPIParser().readContents(yamlDefinition, null , null);
+            this.openAPI = result.getOpenAPI();
+        } catch (Exception ex) {
+            this.openAPI = null;
+        }
+    }
+
+
+
 
     @Override
     public RequestHandleResult handle(HttpServerExchange exchange) throws RequestValidator.ValidateException {
