@@ -19,6 +19,7 @@ public class App {
     private static final DataRepository dataRepository = new DataRepositoryImpl();
     private static final FileHandler fileHandler = new FileHandler();
     private static final DefinitionHandler definitionHandler = new DefinitionHandler(requestHandler);
+    private static final TableHandler tableHandler = new TableHandler();
     static  {
         SimpleModule module = new SimpleModule();
         module.addSerializer(new ResultSetSerializer());
@@ -37,6 +38,11 @@ public class App {
 
                         boolean isDefinitionPost = definitionHandler.handle(exchange);
                         if (isDefinitionPost) {
+                            return;
+                        }
+
+                        boolean isTableHandler = tableHandler.handle(exchange);
+                        if (isTableHandler) {
                             return;
                         }
 
